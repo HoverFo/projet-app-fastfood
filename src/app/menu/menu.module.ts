@@ -15,6 +15,5 @@ imports: [
 CommonModule,
 MenuRoutingModule
 ],
-providers: [MenuService],
 })
 export class MenuModule {}

@@ -5,7 +5,7 @@ import { MenuListComponent } from './pages/menu-list/menu-list.component';
 import { NotFoundComponent } from '../core/components/not-found/not-found.component';
 
 const routes: Routes = [
-{ path: ':fastfoodid', component: MenuListComponent },
+{ path: 'fastfood/:fastfoodid', component: MenuListComponent },
 ];
 
 @NgModule({

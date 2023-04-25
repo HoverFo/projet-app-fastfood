@@ -1,14 +1,31 @@
 <div class="fastfood-container">
-  <div *ngFor="let fastFood of fastfoods$ | async" (click)="navigateToMenuPage(fastFood)">
-    <div class="fast-food-box">
-      <h2>{{ fastFood.name }}</h2>
-      <img *ngIf="fastFood.name === 'McDonalds'" [src]="'https://images.bfmtv.com/NUJHUYUkXAYVPZAR888_w9rjrNc=/0x0:1196x1192/1196x0/images/-458880.jpg'" width="400">
-      <img *ngIf="fastFood.name === 'Burger King'" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Burger_King_logo_%281999%29.svg/2024px-Burger_King_logo_%281999%29.svg.png" width="400">
-      <img *ngIf="fastFood.name === 'KFC'" src="https://cloudfront-eu-central-1.images.arcpublishing.com/lexpress/O3KLIMXTTBC3TJFDML44VEZG3I.jpg" width="400">
-      <img *ngIf="fastFood.name === 'Quick'" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Quick-Logo.svg/1024px-Quick-Logo.svg.png" width="400">
-      <img *ngIf="fastFood.name === 'O\'Tacos'" src="https://www.datocms-assets.com/6995/1571829223-logoavant.jpg?auto=format&w=1200" width="400">
+  
+    <div *ngFor="let fastFood of fastfoods$ | async" >
+      
+        <div class="fast-food-box">
+          <div (click)="navigateToMenuPage(fastFood)">
+          <h2>{{ fastFood.name }}</h2>
+          <img *ngIf="fastFood.name === 'McDonalds'" [src]="'https://images.bfmtv.com/NUJHUYUkXAYVPZAR888_w9rjrNc=/0x0:1196x1192/1196x0/images/-458880.jpg'" width="400">
+          <img *ngIf="fastFood.name === 'BurgerKing'" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Burger_King_logo_%281999%29.svg/2024px-Burger_King_logo_%281999%29.svg.png" width="400">
+          <img *ngIf="fastFood.name === 'KFC'" src="https://cloudfront-eu-central-1.images.arcpublishing.com/lexpress/O3KLIMXTTBC3TJFDML44VEZG3I.jpg" width="400">
+          <img *ngIf="fastFood.name === 'Quick'" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Quick-Logo.svg/1024px-Quick-Logo.svg.png" width="400">
+          <img *ngIf="fastFood.name === 'O\'Tacos'" src="https://www.datocms-assets.com/6995/1571829223-logoavant.jpg?auto=format&w=1200" width="400">
+      </div>
+      
       <!-- Ajoutez d'autres conditions pour afficher d'autres logos en fonction des noms -->
-    </div>
+
+            <button mat-icon-button color="red" 
+      (click)="delete(fastFood.id)">
+      <mat-icon>delete</mat-icon>
+      </button> 
+      </div>
+    <br>
   </div>
+  
 </div>
+<div class="btn-holder">
+  <button mat-fab color="warn" (click)="openFastfoodForm()"><mat-icon>add</mat-icon></button>
+</div>
+
+
   

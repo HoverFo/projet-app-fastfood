@@ -10,7 +10,8 @@ import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorHandler } from '@angular/core';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-
+import { GlobalErrorHandler } from './handlers/global-error-handler';
+import { HttpLoadingInterceptor } from './interceptors/http-loading-interceptor';
 
 
 @NgModule({
@@ -29,6 +30,21 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
   ],
   exports: [
     NavigationComponent,NotFoundComponent
+  ],
+  providers:[
+    {
+      // processes all errors
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandler,
+    },
+    {
+      // interceptor to show loading spinner
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpLoadingInterceptor,
+      multi: true,
+    },
   ]
 })
-export class CoreModule { }
+export class CoreModule { 
+  
+}

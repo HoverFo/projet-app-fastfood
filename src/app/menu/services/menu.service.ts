@@ -13,8 +13,25 @@ export class MenuService {
   constructor(private http: HttpClient) { }
 
   getMenusByFastFood(fastFoodId: number): Observable<Menu[]> {
-    const url = `${environment.iutApiBaseUrl}/menu/fastfood/${fastFoodId}`;
-    return this.http.get<Menu[]>(url);
+    return this.http.get<Menu[]>(`${environment.iutApiBaseUrl}/menu/fastfood/${fastFoodId}`);
   }
- 
+  
+  
+
+    delete(id: number): Observable<string>{
+      return this.http.delete<string>(environment.iutApiBaseUrl+"/menu/"+id);
+    }
+  
+    update(menu: Menu): Observable<string>{
+      return this.http.put<string>(environment.iutApiBaseUrl+"/menu/"+menu.id, menu);
+    }
+
+  create(menu: Menu): Observable<string>{
+    return this.http.post<string>(environment.iutApiBaseUrl+"/menu", menu);
+  }
+
+  getById(id: number): Observable<Menu>{
+    return this.http.get<Menu>(environment.iutApiBaseUrl+"/menu/"+id)
+  }
+
 }

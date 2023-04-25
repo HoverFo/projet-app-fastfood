@@ -18,3 +18,24 @@
     flex-basis: calc(33.33% - 20px); /* permet d'afficher 3 éléments sur chaque ligne */
     margin: 50px; /* marge de 10 pixels entre les éléments */
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+  }
+  
+  .fastfood-container .btn-holder {
+    justify-content: flex-end;
+    display: flex;
+    padding: 1%;
+  }
+
+  button{
+    left: 10px;
+  }
+
+
+  
+ 

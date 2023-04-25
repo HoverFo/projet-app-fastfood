@@ -3,5 +3,6 @@ export interface Menu{
     name:string;
     frite:boolean;
     price:number;
+    fastfood:string;
  }
 

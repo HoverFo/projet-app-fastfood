@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/projet-app",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/fastfood/**",
+      "**/menu/**"
+
+    ],
+    "rewrites": [ { 
+      "source": "**", 
+      "destination": "/index.html" } ]
+  }
+}

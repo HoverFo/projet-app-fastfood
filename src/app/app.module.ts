@@ -6,19 +6,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
+import { MapComponent } from './map/map/map.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
 declarations: [
-AppComponent
+AppComponent,
+MapComponent,
 ],
 imports: [
 BrowserModule,
 BrowserAnimationsModule,
 CoreModule,
 RouterModule, // ce module ne devrait pas être nécessaire
-AppRoutingModule
+AppRoutingModule,
+
 ],
-providers: [],
+
 bootstrap: [AppComponent]
 })
 export class AppModule {}

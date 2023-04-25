@@ -4,10 +4,14 @@
 
 .sidenav {
   width: 200px;
+  background: 		#BE1931;
 }
 
+
 .sidenav .mat-toolbar {
-  background: inherit;
+  background: 	#BE1931;
+  color: white
 }
+
 
 .mat-sidenav-content{ display: flex; flex-direction: column; }

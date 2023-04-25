@@ -12,9 +12,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
+import { GenericPopupComponent } from './components/generic-popup/generic-popup.component';
 
 @NgModule({
-  
+  declarations: [GenericPopupComponent],
   imports: [
     CommonModule,
     MatDialogModule,

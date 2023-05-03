@@ -1,20 +1,10 @@
-<h1 align="center">Angular - FastEasyFood</h1>
+<h1 align="center">Angular - FastEasyFood - APP</h1>
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/115985120/234287075-704069e9-a411-4ded-a14a-c6b5a8099acd.png" alt="angular-logo" width="400px" height="400px"/>
 </p>
 
 
-
-
-
-
-
-
-
-# ProjetApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
 ## Development server
 
